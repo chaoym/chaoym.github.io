@@ -51,7 +51,7 @@ My research focuses on the intersection of algorithmic game theory and computer 
 
 - [On Designing the Optimal Integrated Ad Auction in E-commerce Platforms](https://chaoym.github.io/), **Yuchao Ma**\*, Weian Li\*, Yuhan Wang, Zitian Guo, Yuejia Dou, Qi Qi, Changyuan Yu, **AAAI 2025**
 - [GenAuction: A Generative Auction for Online Advertising](https://chaoym.github.io/), **Yuchao Ma**\*, Ruohan Qian\*, Bingzhe Wang\*, Qi Qi, Wenqiang liu, Qian Tang, Zhao Shen, Wei Zhong, Bo Shen, Yixin Su, Bin Zou, Wen Yi, Zhi Guo, Shuanglong li, Lin Liu, **AAAI 2025**
-- [Joint Bidding in Ad Auctions](https://link.springer.com/chapter/10.1007/978-981-97-2340-9_29), **Yuchao Ma**\*, Weian Li\*, Wanzhi Zhang, Yahui Lei, Zhicheng Zhang, Qi Qi, Qiang Liu, Xingxing Wang, **AAAI 2025**
+- [Joint Bidding in Ad Auctions](https://link.springer.com/chapter/10.1007/978-981-97-2340-9_29), **Yuchao Ma**\*, Weian Li\*, Wanzhi Zhang, Yahui Lei, Zhicheng Zhang, Qi Qi, Qiang Liu, Xingxing Wang, **TAMC 2024**
 
 
 
