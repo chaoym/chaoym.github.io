@@ -17,9 +17,9 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Hello, I am Yuchao Ma (马毓超), a second-year Ph.D. student at the Gaoling School of Artificial Intelligence at Renmin University of China, advised by Professor Qi Qi. 
+Hello, I am Yuchao Ma (马毓超), a second-year Ph.D. student at the [Gaoling School of Artificial Intelligence](http://ai.ruc.edu.cn/), [Renmin University of China](https://en.ruc.edu.cn/), advised by Professor [Qi Qi](https://gsai.ruc.edu.cn/qiqi). 
 
-I received my Bachelor's degree in information engineering at Beijing University of Posts and Telecommunications. 
+I received my Bachelor's degree in [School of Information and Communication Engineering](https://sice.bupt.edu.cn/), [Beijing University of Posts and Telecommunications](https://www.bupt.edu.cn/). 
 
 My research focuses on the intersection of algorithmic game theory and computer science, especially on the following topics:
 
@@ -49,7 +49,7 @@ My research focuses on the intersection of algorithmic game theory and computer 
 </div> -->
 - [A Context-Aware Framework for Integrating Ad Auctions and Recommendations](https://chaoym.github.io/), **Yuchao Ma**, Weian Li, Yuejia Dou, Zhiyuan Su, Changyuan Yu, Qi Qi, **WWW 2025**
 
-- [On Designing the Optimal Integrated Ad Auction in E-commerce Platforms](https://chaoym.github.io/), **Yuchao Ma** $^*$, Weian Li$^*$, Yuhan Wang, Zitian Guo, Yuejia Dou, Qi Qi, Changyuan Yu, **AAAI 2025**
+- [On Designing the Optimal Integrated Ad Auction in E-commerce Platforms](https://chaoym.github.io/), **Yuchao Ma$^*$**, Weian Li$^*$, Yuhan Wang, Zitian Guo, Yuejia Dou, Qi Qi, Changyuan Yu, **AAAI 2025**
 - [GenAuction: A Generative Auction for Online Advertising](https://chaoym.github.io/), **Yuchao Ma** $^*$, Ruohan Qian$^*$, Bingzhe Wang$^*$, Qi Qi, Wenqiang liu, Qian Tang, Zhao Shen, Wei Zhong, Bo Shen, Yixin Su, Bin Zou, Wen Yi, Zhi Guo, Shuanglong li, Lin Liu, **AAAI 2025**
 
 - [Joint Bidding in Ad Auctions](https://link.springer.com/chapter/10.1007/978-981-97-2340-9_29), **Yuchao Ma**$^*$, Weian Li$^*$, Wanzhi Zhang, Yahui Lei, Zhicheng Zhang, Qi Qi, Qiang Liu, Xingxing Wang, **AAAI 2025**
