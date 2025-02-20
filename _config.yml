@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Yuchao Ma"
-description              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. "
+# description              : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. "
 repository               : "chaoym/chaoym.github.io"
 google_scholar_stats_use_cdn : true
 
