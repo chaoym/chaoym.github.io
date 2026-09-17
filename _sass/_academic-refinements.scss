@@ -170,6 +170,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .visitor-stats__map .jvectormap-zoomin, .visitor-stats__map .jvectormap-zoomout { display: none; }
 .visitor-stats__map .mapmyvisitors-map { margin: 0 auto; }
 .visitor-stats__map .mapmyvisitors-visitors, .visitor-stats__map .mapmyvisitors-date { font-family: $academic-sans; }
+// The provider's background bitmap includes decorative +/- icons.
+// Cover that empty-ocean corner below the SVG so visitor markers stay visible.
+.visitor-stats__map .mapmyvisitors-map:before, .visitor-map-dialog .mapmyvisitors-map:before { content: ""; position: absolute; bottom: 0; left: 0; width: 24px; height: 40px; background: $academic-paper; z-index: 0; }
+.visitor-stats__map .jvectormap-container, .visitor-map-dialog .jvectormap-container { z-index: 1; }
 
 body.visitor-map-open { overflow: hidden; }
 .visitor-map-dialog { width: calc(100% - 32px); max-width: 960px; max-height: calc(100% - 32px); margin: auto; padding: 24px; border: 1px solid $academic-rule; border-radius: 12px; background: $academic-paper; color: $academic-ink; box-shadow: 0 24px 80px rgba($academic-ink,.2); font-family: $academic-sans; }
