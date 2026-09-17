@@ -164,6 +164,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .visitor-stats__map { width: 100%; max-width: 480px; min-width: 0; }
 .visitor-stats__status { margin: 0; padding: 25px 12px; color: $academic-muted; font-size: 11px; text-align: center; }
 .visitor-stats__map #mapmyvisitors-widget { max-width: 100%; }
+.visitor-stats__map .mapmyvisitors-map { margin: 0 auto; }
 .visitor-stats__map .mapmyvisitors-visitors, .visitor-stats__map .mapmyvisitors-date { font-family: $academic-sans; }
 
 @media (max-width: 924px) {

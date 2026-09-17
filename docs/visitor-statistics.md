@@ -24,6 +24,14 @@ https://mapmyvisitors.com/b/login.
 - Missing or blocked external data is shown as unavailable, never as a fabricated zero.
 - JavaScript-disabled browsers receive explanatory text rather than a loading indicator.
 - An empty Google Analytics ID no longer loads an unconfigured Google tracker.
+- The map and markers scale together if the viewport narrows after loading;
+  resizing never reloads the tracker or creates another pageview.
+
+## Verification
+
+The production site returned a real total pageview count and an SVG visitor
+marker with fill `#c54649`. The official widget links to this site's statistics
+at https://mapmyvisitors.com/web/1c8av. Local preview loads no tracking script.
 
 ## Provider parameters verified on 2026-09-17
 

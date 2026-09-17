@@ -31,6 +31,17 @@
     status.textContent = 'Visitor statistics are temporarily unavailable.';
   }
 
+  // Scale the map and its markers together when the viewport becomes narrower.
+  // Do not reload the tracking script during resizing, which would add pageviews.
+  function fitMap() {
+    var map = host.querySelector('.mapmyvisitors-map');
+    if (!map) return;
+    var originalWidth = parseFloat(map.style.width);
+    if (originalWidth > 0) {
+      map.style.zoom = Math.min(1, host.clientWidth / originalWidth);
+    }
+  }
+
   // The provider loads its data after the script itself has finished loading.
   var observer = new MutationObserver(function () {
     var counter = host.querySelector('.mapmyvisitors-visitors');
@@ -38,6 +49,12 @@
       status.hidden = true;
       observer.disconnect();
       window.clearTimeout(timeout);
+      fitMap();
+      if (window.ResizeObserver) {
+        new ResizeObserver(fitMap).observe(host);
+      } else {
+        window.addEventListener('resize', fitMap);
+      }
     }
   });
   observer.observe(host, { childList: true, subtree: true, characterData: true });
