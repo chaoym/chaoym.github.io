@@ -16,8 +16,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .masthead { background: rgba($academic-paper, .96); border-bottom: 1px solid $academic-rule; backdrop-filter: blur(12px); animation: none; }
 .masthead__inner-wrap { max-width: 1120px; padding: 14px 32px; font-family: $academic-sans; }
 .masthead__menu { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.site-brand { color: $academic-ink; font-family: $academic-serif; font-size: 21px; white-space: nowrap; }
+.site-brand { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 38px; height: 38px; border: 1px solid $academic-rule; border-radius: 8px; color: $academic-ink; font-family: $academic-serif; font-size: 20px; line-height: 1; letter-spacing: -1px; white-space: nowrap; }
 .site-brand:hover, .site-brand:visited { color: $academic-ink; }
+.site-brand:hover { border-color: $academic-blue; }
 .greedy-nav {
   min-width: 250px;
   background: transparent;
@@ -165,7 +166,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 @media (max-width: 599px) {
   .masthead__inner-wrap { padding: 10px 22px; }
   .masthead__menu { gap: 16px; }
-  .site-brand { font-size: 17px; }
+  .site-brand { width: 34px; height: 34px; font-size: 18px; }
   .greedy-nav { min-width: 0; }
   .greedy-nav a { margin-left: 18px; padding: 8px 0; font-size: 11px; letter-spacing: 0; }
   #main { margin-top: 26px; padding: 0 22px 40px; }
@@ -209,7 +210,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 }
 @media (max-width: 359px) {
   .masthead__inner-wrap { padding-right: 18px; padding-left: 18px; }
-  .site-brand { font-size: 15px; }
   .greedy-nav a { margin-left: 13px; font-size: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
