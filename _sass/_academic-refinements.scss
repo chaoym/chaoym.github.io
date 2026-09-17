@@ -1,16 +1,18 @@
 // Shared presentation for the academic homepage, publications, and awards.
-$academic-ink: #203631;
-$academic-blue: #246b5b;
-$academic-muted: #67736e;
-$academic-rule: #dfe5df;
-$academic-paper: #fcfcf9;
+$academic-ink: #24364b;
+$academic-blue: #365f84;
+$academic-accent: #8d4f53;
+$academic-muted: #667180;
+$academic-rule: #e0e5eb;
+$academic-paper: #fcfbf9;
+$academic-body: #465261;
 $academic-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 $academic-serif: Georgia, "Times New Roman", serif;
 $academic-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 
 html, body { background: $academic-paper; }
-body { color: #44524d; font-family: $academic-sans; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-::selection { background: #dbece3; color: $academic-ink; }
+body { color: $academic-body; font-family: $academic-sans; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+::selection { background: #e1e9f2; color: $academic-ink; }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid $academic-blue; outline-offset: 5px; }
 
 .masthead { background: rgba($academic-paper, .96); border-bottom: 1px solid $academic-rule; backdrop-filter: blur(12px); animation: none; }
@@ -18,7 +20,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .masthead__menu { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .site-brand { display: block; flex-shrink: 0; width: 84px; height: 50px; overflow: hidden; transition: opacity .15s; }
 // Frame the approved artwork's lettering without its generous preview margins.
-.site-brand__wordmark { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; transform: scale(1.1); filter: brightness(1.035); mix-blend-mode: multiply; }
+.site-brand__wordmark { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; transform: scale(1.1); filter: brightness(1.035) saturate(.65) hue-rotate(60deg); mix-blend-mode: multiply; }
 .site-brand:hover { opacity: .8; }
 .greedy-nav {
   min-width: 250px;
@@ -26,10 +28,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   a { margin: 0 0 0 24px; padding: 8px 0; color: $academic-muted; font-size: 12px; font-weight: 500; letter-spacing: .2px; transition: color .15s; }
   a:hover, a[aria-current="page"] { color: $academic-blue; background: transparent; }
   .visible-links a:before { display: none; }
-  .visible-links a[aria-current="page"]:after { content: ""; position: absolute; bottom: 1px; left: 0; right: 0; height: 2px; background: $academic-blue; }
+  .visible-links a[aria-current="page"]:after { content: ""; position: absolute; bottom: 1px; left: 0; right: 0; height: 2px; background: $academic-accent; }
   .visible-links li:first-child { font-weight: 500; }
   button { background: $academic-blue; }
-  .hidden-links { background: $academic-paper; border-color: $academic-rule; box-shadow: 0 8px 24px rgba(32,54,49,.08); }
+  .hidden-links { background: $academic-paper; border-color: $academic-rule; box-shadow: 0 8px 24px rgba($academic-ink,.08); }
   .hidden-links a { color: $academic-ink; }
 }
 
@@ -60,7 +62,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   strong { color: $academic-ink; font-weight: 600; }
   p { margin: 0 0 14px; }
   a, a:visited { color: $academic-blue; text-decoration: none; }
-  a:hover { color: #164f42; text-decoration: underline; text-underline-offset: 4px; }
+  a:hover { color: #233f5b; text-decoration: underline; text-underline-offset: 4px; }
   .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
   .section-heading { display: flex; align-items: center; gap: 20px; margin: 44px 0 20px; padding: 0; border: 0; color: $academic-ink; font-family: $academic-serif; font-size: 26px; font-weight: 400; line-height: 1.3; letter-spacing: -.6px; scroll-margin-top: 100px; }
   .section-heading:before { display: none; }
@@ -70,7 +72,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .page-heading:after { display: none; }
   #about-me { margin-top: 0; }
   #about-me:before { display: none; }
-  .about-copy { color: #44524d; font-size: 15px; line-height: 1.85; }
+  .about-copy { color: $academic-body; font-size: 15px; line-height: 1.85; }
   .about-copy p { margin-bottom: 20px; }
   .about-copy p:last-child { margin-bottom: 0; }
 
@@ -105,7 +107,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .publication-authors strong { color: $academic-ink; }
   .publication-venue { margin: 0; color: $academic-blue; font-size: 11.5px; line-height: 1.7; }
   .publication-links { margin: 8px 0 0; font-family: $academic-mono; font-size: 10px; }
-  .publication-links a { padding-bottom: 2px; border-bottom: 1px solid #c2d6ca; }
+  .publication-links a { padding-bottom: 2px; border-bottom: 1px solid #c6d4e2; }
   .publication-links a:hover { border-color: $academic-blue; text-decoration: none; }
 
   .education-list { margin: 0; padding: 0; list-style: none; }
@@ -135,7 +137,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .exchange-details h3 a { color: $academic-ink; }
   .exchange-details .exchange-location { margin: 0 0 9px; color: $academic-muted; font-size: 11px; line-height: 1.7; }
   .exchange-details .exchange-presentation { display: flex; align-items: baseline; gap: 10px; margin: 0; font-size: 12px; line-height: 1.75; }
-  .exchange-type { flex-shrink: 0; padding: 1px 6px; border-radius: 3px; background: #eaf0e9; color: $academic-blue; font-family: $academic-mono; font-size: 9px; line-height: 1.8; }
+  .exchange-type { flex-shrink: 0; padding: 1px 6px; border-radius: 3px; background: #edf1f6; color: $academic-blue; font-family: $academic-mono; font-size: 9px; line-height: 1.8; }
 
   .detail-list { margin: 0; }
   .detail-list > div { display: grid; grid-template-columns: 100px minmax(0,1fr); gap: 20px; margin: 0; padding: 15px 0; border-bottom: 1px solid $academic-rule; }
@@ -146,7 +148,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 
   .awards-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid $academic-rule; }
   .awards-list li { display: grid; grid-template-columns: 82px minmax(0,1fr); gap: 24px; margin: 0; padding: 26px 0; border-bottom: 1px solid $academic-rule; }
-  .award-date { padding-top: 3px; color: $academic-blue; font-family: $academic-mono; font-size: 10px; line-height: 1.8; text-transform: uppercase; }
+  .award-date { padding-top: 3px; color: $academic-accent; font-family: $academic-mono; font-size: 10px; line-height: 1.8; text-transform: uppercase; }
   .awards-list h2 { margin: 0 0 8px; color: $academic-ink; font-size: 15px; font-weight: 600; line-height: 1.6; }
   .awards-list p { margin: 0; color: $academic-muted; font-size: 12px; line-height: 1.8; }
 }
