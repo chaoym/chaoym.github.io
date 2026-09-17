@@ -1,70 +1,90 @@
 ---
 permalink: /
-title: ""
-excerpt: ""
+title: "Home"
+excerpt: "Yuchao Ma studies economics and computer science (EconCS), with applications in computational advertising, marketing, recommendation, and bidding."
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-{% if site.google_scholar_stats_use_cdn %}
-{% assign gsDataBaseUrl = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: "@" %}
-{% else %}
-{% assign gsDataBaseUrl = "https://raw.githubusercontent.com/" | append: site.repository | append: "/" %}
-{% endif %}
-{% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
+<h1 class="visually-hidden">About Yuchao Ma</h1>
 
-<span class='anchor' id='about-me'></span>
+<div class="about-copy" id="about-me" markdown="1">
 
-Hello, I am Yuchao Ma (马毓超), a second-year Ph.D. student at the [Gaoling School of Artificial Intelligence](http://ai.ruc.edu.cn/), [Renmin University of China](https://en.ruc.edu.cn/), advised by Professor [Qi Qi](https://gsai.ruc.edu.cn/qiqi). 
+I am **Yuchao Ma**, a Ph.D. student at the [Gaoling School of Artificial Intelligence](https://ai.ruc.edu.cn/), [Renmin University of China](https://en.ruc.edu.cn/), advised by Professor [Qi Qi](https://gsai.ruc.edu.cn/qiqi). I received my B.Eng. in Information Engineering from [Beijing University of Posts and Telecommunications](https://www.bupt.edu.cn/) in 2023.
 
-I received my Bachelor's degree in [School of Information and Communication Engineering](https://sice.bupt.edu.cn/), [Beijing University of Posts and Telecommunications](https://www.bupt.edu.cn/). 
+My research interests lie at the intersection of **economics and computer science (EconCS)**, with a focus on computational advertising. I explore new approaches to **advertising, marketing, recommendation, and bidding**, drawing on algorithmic game theory and mechanism design.
 
-My research focuses on the intersection of algorithmic game theory and computer science, especially on the following topics:
-
-- Data-driven mechanism design.
-
-- Computational advertising, including ad auctions and auto-bidding.
-
-<!-- My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
-
-
-<!-- # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
-
-# 📝 Publications 
-
-<!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
-<div class='paper-box-text' markdown="1"> -->
-
-<!-- [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/papers/He_Deep_Residual_Learning_CVPR_2016_paper.pdf) -->
-
-<!-- **Kaiming He**, Xiangyu Zhang, Shaoqing Ren, Jian Sun
-
-[**Project**](https://scholar.google.com/citations?view_op=view_citation&hl=zh-CN&user=DhtAFkwAAAAJ&citation_for_view=DhtAFkwAAAAJ:ALROH1vI_8AC) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 </div>
-</div> -->
-- `WWW 2025` [A Context-Aware Framework for Integrating Ad Auctions and Recommendations](https://chaoym.github.io/), **Yuchao Ma**, Weian Li, Yuejia Dou, Zhiyuan Su, Changyuan Yu, Qi Qi
-- ``AAAI 2025`` [On Designing the Optimal Integrated Ad Auction in E-commerce Platforms](https://ojs.aaai.org/index.php/AAAI/article/view/33347), **Yuchao Ma**\*, Weian Li\*, Yuhan Wang, Zitian Guo, Yuejia Dou, Qi Qi, Changyuan Yu
-- ``AAAI 2025`` [GenAuction: A Generative Auction for Online Advertising](https://ojs.aaai.org/index.php/AAAI/article/view/33348), **Yuchao Ma**\*, Ruohan Qian\*, Bingzhe Wang\*, Qi Qi, Wenqiang liu, Qian Tang, Zhao Shen, Wei Zhong, Bo Shen, Yixin Su, Bin Zou, Wen Yi, Zhi Guo, Shuanglong li, Lin Liu
-- ``TAMC 2024`` [Joint Bidding in Ad Auctions](https://link.springer.com/chapter/10.1007/978-981-97-2340-9_29), **Yuchao Ma**\*, Weian Li\*, Wanzhi Zhang, Yahui Lei, Zhicheng Zhang, Qi Qi, Qiang Liu, Xingxing Wang
 
+<h2 class="section-heading" id="news">News</h2>
 
+<ul class="news-list">
+{% for item in site.data.news limit:4 %}
+  <li><span class="news-date">{{ item.date }}</span><div>{{ item.content | markdownify }}</div></li>
+{% endfor %}
+</ul>
 
-<!-- # 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
+{% if site.data.news.size > 4 %}
+<details class="news-archive">
+  <summary><span class="archive-closed">Earlier news</span><span class="archive-open">Hide earlier news</span><span class="archive-count">{{ site.data.news.size | minus: 4 }}</span></summary>
+  <ul class="news-list">
+  {% for item in site.data.news offset:4 %}
+    <li><span class="news-date">{{ item.date }}</span><div>{{ item.content | markdownify }}</div></li>
+  {% endfor %}
+  </ul>
+</details>
+{% endif %}
 
-# 📖 Educations
-- *2023.09 - 2028.06 (expected)*, Gaoling School of Artificial Intelligence, Renmin University of China.
-- *2019.09 - 2023.06*, School of Information and Communication Engineering, Beijing University of Posts and Telecommunications.
+<h2 class="section-heading" id="-educations">Education</h2>
 
-<!-- # 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/) -->
+<ul class="education-list">
+  <li class="education-item">
+    <div class="education-logo education-logo--ruc"><img src="{{ '/images/institutions/ruc.png' | relative_url }}" alt="" width="60" height="60" loading="lazy"></div>
+    <div class="education-details">
+      <h3>Renmin University of China</h3>
+      <p class="education-school">Gaoling School of Artificial Intelligence</p>
+      <p class="education-degree">Ph.D. student in Artificial Intelligence</p>
+    </div>
+    <div class="education-meta">
+      <p class="education-location">Beijing, China</p>
+      <p class="education-date">Sep 2023 – Present</p>
+    </div>
+  </li>
+  <li class="education-item">
+    <div class="education-logo"><img src="{{ '/images/institutions/bupt.png' | relative_url }}" alt="" width="60" height="60" loading="lazy"></div>
+    <div class="education-details">
+      <h3>Beijing University of Posts and Telecommunications</h3>
+      <p class="education-school">School of Information and Communication Engineering</p>
+      <p class="education-degree">B.Eng. in Information Engineering</p>
+    </div>
+    <div class="education-meta">
+      <p class="education-location">Beijing, China</p>
+      <p class="education-date">Sep 2019 – Jun 2023</p>
+    </div>
+  </li>
+</ul>
 
-<!-- # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China. -->
+<h2 class="section-heading" id="academic-exchanges">Presentations</h2>
+
+<ul class="exchange-list">
+{% for exchange in site.data.academic_exchanges %}
+  <li>
+    <time class="exchange-date" datetime="{{ exchange.month }}">{{ exchange.date }}</time>
+    <div class="exchange-details">
+      <h3><a href="{{ exchange.conference_url }}">{{ exchange.conference }}</a></h3>
+      <p class="exchange-location">{{ exchange.location }}</p>
+      <p class="exchange-presentation"><span class="exchange-type">{{ exchange.type }}</span><a href="{{ exchange.paper_url }}">{{ exchange.paper }}</a></p>
+    </div>
+  </li>
+{% endfor %}
+</ul>
+
+<h2 class="section-heading" id="academic-service">Service</h2>
+
+<dl class="detail-list">
+  <div><dt>Reviewer</dt><dd>ICML 2026; EC 2025/2026; WINE 2025/2026; WWW 2026/2027; KDD 2026/2027; AAAI 2026/2027; IJTCS 2025</dd></div>
+  <div><dt>Student Service</dt><dd>Undergraduate Student Counselor for the 2023 entering cohort, GSAI, Renmin University of China</dd></div>
+  <div><dt>Memberships</dt><dd>Student member of AAAI, ACM, and CCF</dd></div>
+</dl>

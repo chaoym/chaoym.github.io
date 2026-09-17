@@ -81,6 +81,7 @@
 .author__avatar {
   display: table-cell;
   vertical-align: top;
+  flex-shrink: 0;
   width: 75px;
   // set width only, for non-square avatars
   // height: 36px;
@@ -91,14 +92,29 @@
     height: auto;
   }
 
-  img {
+  .author__portrait {
+    position: relative;
+    width: 100%;
     max-width: 175px;
     min-width: 75px;
+    aspect-ratio: 1;
+    overflow: hidden;
     border-radius: 50%;
+    background: #adc9dc;
 
     @include breakpoint($large) {
-      padding: 5px;
-      border: 1px solid $border-color;
+      border: 5px solid #fff;
+      box-shadow: 0 0 0 1px $border-color;
+    }
+
+    img {
+      // Frame DSC_1563 in the original circular avatar without changing the photo.
+      position: absolute;
+      width: 226%;
+      max-width: none;
+      height: auto;
+      left: -18%;
+      top: -18%;
     }
   }
 }
