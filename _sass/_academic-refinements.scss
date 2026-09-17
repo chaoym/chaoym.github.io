@@ -39,6 +39,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 #main:before, #main:after { display: none; }
 #main > .sidebar { position: sticky; top: 106px; align-self: start; float: none; width: auto; margin: 0; padding: 0; }
 #main > .page { display: flow-root; float: none; width: auto; min-width: 0; margin: 0; padding: 0; }
+#main > .page .page__content { float: none; }
 .profile_box { display: block; text-align: left; }
 .author__avatar { display: block; width: 156px; }
 .author__avatar .author__portrait { width: 100%; min-width: 0; max-width: 156px; margin: 0; border: 0; border-radius: 10px; box-shadow: none; }
@@ -153,6 +154,18 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .awards-list p { margin: 0; color: $academic-muted; font-size: 12px; line-height: 1.8; }
 }
 
+.visitor-stats { display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 24px; align-items: start; margin-top: 52px; padding-top: 26px; border-top: 1px solid $academic-rule; font-family: $academic-sans; }
+.visitor-stats__intro h2 { margin: 0 0 14px; color: $academic-ink; font-family: $academic-serif; font-size: 22px; font-weight: 400; line-height: 1.3; }
+.visitor-stats__legend { display: flex; align-items: center; gap: 7px; margin: 0 0 8px; color: $academic-muted; font-size: 11px; }
+.visitor-stats__legend span { width: 6px; height: 6px; flex-shrink: 0; border-radius: 50%; background: #c54649; }
+.visitor-stats__note { margin: 0 0 8px; color: $academic-muted; font-size: 10px; line-height: 1.7; }
+.visitor-stats__details { color: $academic-blue; font-size: 10px; text-decoration: none; }
+.visitor-stats__details:hover { text-decoration: underline; text-underline-offset: 3px; }
+.visitor-stats__map { width: 100%; max-width: 480px; min-width: 0; }
+.visitor-stats__status { margin: 0; padding: 25px 12px; color: $academic-muted; font-size: 11px; text-align: center; }
+.visitor-stats__map #mapmyvisitors-widget { max-width: 100%; }
+.visitor-stats__map .mapmyvisitors-visitors, .visitor-stats__map .mapmyvisitors-date { font-family: $academic-sans; }
+
 @media (max-width: 924px) {
   #main { display: block; max-width: 800px; margin-top: 32px; padding-bottom: 50px; }
   #main > .sidebar { position: static; margin-bottom: 35px; padding-bottom: 28px; border-bottom: 1px solid $academic-rule; }
@@ -170,6 +183,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .masthead__inner-wrap { padding: 10px 22px; }
   .masthead__menu { gap: 16px; }
   .site-brand { width: 72px; height: 43px; }
+  .visitor-stats { grid-template-columns: minmax(0,1fr); gap: 18px; margin-top: 38px; padding-top: 22px; }
+  .visitor-stats__intro h2 { font-size: 21px; }
   .greedy-nav { min-width: 0; }
   .greedy-nav a { margin-left: 18px; padding: 8px 0; font-size: 11px; letter-spacing: 0; }
   #main { margin-top: 26px; padding: 0 22px 40px; }

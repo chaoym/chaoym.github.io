@@ -1,0 +1,19 @@
+{% assign visitor_stats = site.visitor_stats %}
+{% if visitor_stats.enabled and visitor_stats.widget_id and visitor_stats.widget_id != '' %}
+<section class="visitor-stats" aria-labelledby="visitors-heading">
+  <div class="visitor-stats__intro">
+    <h2 id="visitors-heading">Visitors</h2>
+    <p class="visitor-stats__legend"><span aria-hidden="true"></span>Visitor locations</p>
+    <p class="visitor-stats__note">Approximate locations based on IP.</p>
+    {% if visitor_stats.started_on and visitor_stats.started_on != '' %}<p class="visitor-stats__note">Counting since {{ visitor_stats.started_on | date: "%b %Y" }}.</p>{% endif %}
+    {% if visitor_stats.stats_url and visitor_stats.stats_url != '' %}<a class="visitor-stats__details" href="{{ visitor_stats.stats_url | escape }}" target="_blank" rel="noopener noreferrer">View statistics <span aria-hidden="true">↗</span></a>{% endif %}
+  </div>
+  <div class="visitor-stats__map" id="visitor-map" aria-label="World map and visitor counter">
+    <p class="visitor-stats__status" role="status" hidden>Loading visitor statistics…</p>
+    <noscript><p class="visitor-stats__note">Enable JavaScript to view the visitor map.</p></noscript>
+  </div>
+</section>
+<script defer src="{{ '/assets/js/visitor-stats.js' | relative_url }}?v={{ site.time | date: '%s' }}"
+  data-widget-id="{{ visitor_stats.widget_id | escape }}"
+  data-site-url="{{ site.url | escape }}"></script>
+{% endif %}
