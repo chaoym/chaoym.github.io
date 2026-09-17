@@ -26,11 +26,15 @@ https://mapmyvisitors.com/b/login.
 - An empty Google Analytics ID no longer loads an unconfigured Google tracker.
 - The map and markers scale together if the viewport narrows after loading;
   resizing never reloads the tracker or creates another pageview.
+- Clicking the map or **Enlarge map** opens a local dialog with zoom controls.
+  It copies only the rendered map; opening, zooming, and closing never issue
+  tracking requests. Escape, the close button, and backdrop dismiss the dialog.
+  The provider's map-wide external link is removed after the map has loaded.
 
 ## Verification
 
 The production site returned a real total pageview count and an SVG visitor
-marker with fill `#c54649`. The official widget links to this site's statistics
+marker with fill `#c54649`. This site's provider statistics are available
 at https://mapmyvisitors.com/web/1c8av. Local preview loads no tracking script.
 
 ## Provider parameters verified on 2026-09-17

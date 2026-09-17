@@ -4,6 +4,7 @@
   <div class="visitor-stats__intro">
     <h2 id="visitors-heading">Visitors</h2>
     <p class="visitor-stats__legend"><span aria-hidden="true"></span>Visitor locations</p>
+    <button class="visitor-stats__expand" type="button" aria-haspopup="dialog" aria-controls="visitor-map-dialog" hidden>Enlarge map <span aria-hidden="true">↗</span></button>
     {% if visitor_stats.stats_url and visitor_stats.stats_url != '' %}<a class="visitor-stats__details" href="{{ visitor_stats.stats_url | escape }}" target="_blank" rel="noopener noreferrer">View statistics <span aria-hidden="true">↗</span></a>{% endif %}
   </div>
   <div class="visitor-stats__map" id="visitor-map" aria-label="World map and visitor counter">
@@ -11,6 +12,21 @@
     <noscript><p class="visitor-stats__note">Enable JavaScript to view the visitor map.</p></noscript>
   </div>
 </section>
+<dialog class="visitor-map-dialog" id="visitor-map-dialog" aria-labelledby="visitor-map-title">
+  <div class="visitor-map-dialog__header">
+    <h2 id="visitor-map-title">Visitor map</h2>
+    <button type="button" class="visitor-map-dialog__close" aria-label="Close visitor map" autofocus>×</button>
+  </div>
+  <div class="visitor-map-dialog__viewport" role="img" aria-label="World map showing visitor locations as red dots"></div>
+  <div class="visitor-map-dialog__footer">
+    <span class="visitor-map-dialog__count"></span>
+    <div class="visitor-map-dialog__controls" role="group" aria-label="Map zoom">
+      <button type="button" data-map-zoom="out" aria-label="Zoom out">−</button>
+      <span class="visitor-map-dialog__zoom" aria-live="polite">100%</span>
+      <button type="button" data-map-zoom="in" aria-label="Zoom in">+</button>
+    </div>
+  </div>
+</dialog>
 <script defer src="{{ '/assets/js/visitor-stats.js' | relative_url }}?v={{ site.time | date: '%s' }}"
   data-widget-id="{{ visitor_stats.widget_id | escape }}"
   data-site-url="{{ site.url | escape }}"></script>

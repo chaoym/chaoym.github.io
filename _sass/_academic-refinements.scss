@@ -161,11 +161,29 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .visitor-stats__note { margin: 0 0 8px; color: $academic-muted; font-size: 10px; line-height: 1.7; }
 .visitor-stats__details { color: $academic-blue; font-size: 10px; text-decoration: none; }
 .visitor-stats__details:hover { text-decoration: underline; text-underline-offset: 3px; }
+.visitor-stats__expand { padding: 0; border: 0; background: none; color: $academic-blue; font: inherit; font-size: 11px; cursor: pointer; }
+.visitor-stats__expand:hover { text-decoration: underline; text-underline-offset: 3px; }
+.visitor-stats__expand[hidden] { display: none; }
 .visitor-stats__map { width: 100%; max-width: 480px; min-width: 0; }
 .visitor-stats__status { margin: 0; padding: 25px 12px; color: $academic-muted; font-size: 11px; text-align: center; }
-.visitor-stats__map #mapmyvisitors-widget { max-width: 100%; }
+.visitor-stats__map #mapmyvisitors-widget { max-width: 100%; cursor: zoom-in; }
+.visitor-stats__map .jvectormap-zoomin, .visitor-stats__map .jvectormap-zoomout { display: none; }
 .visitor-stats__map .mapmyvisitors-map { margin: 0 auto; }
 .visitor-stats__map .mapmyvisitors-visitors, .visitor-stats__map .mapmyvisitors-date { font-family: $academic-sans; }
+
+body.visitor-map-open { overflow: hidden; }
+.visitor-map-dialog { width: calc(100% - 32px); max-width: 960px; max-height: calc(100% - 32px); margin: auto; padding: 24px; border: 1px solid $academic-rule; border-radius: 12px; background: $academic-paper; color: $academic-ink; box-shadow: 0 24px 80px rgba($academic-ink,.2); font-family: $academic-sans; }
+.visitor-map-dialog::backdrop { background: rgba($academic-ink,.45); backdrop-filter: blur(3px); }
+.visitor-map-dialog__header, .visitor-map-dialog__footer, .visitor-map-dialog__controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.visitor-map-dialog__header { margin-bottom: 18px; }
+.visitor-map-dialog__header h2 { margin: 0; font-family: $academic-serif; font-size: 24px; font-weight: 400; }
+.visitor-map-dialog button { width: 36px; height: 36px; padding: 0; border: 1px solid $academic-rule; border-radius: 6px; background: $academic-paper; color: $academic-ink; font: inherit; font-size: 20px; line-height: 1; cursor: pointer; }
+.visitor-map-dialog button:hover { background: #edf1f6; }
+.visitor-map-dialog button:disabled { opacity: .35; cursor: default; }
+.visitor-map-dialog__viewport { width: 100%; max-height: 60vh; overflow: auto; overscroll-behavior: contain; }
+.visitor-map-dialog__viewport .mapmyvisitors-map { margin: 0; pointer-events: none; }
+.visitor-map-dialog__footer { margin-top: 18px; color: $academic-muted; font-size: 12px; }
+.visitor-map-dialog__zoom { min-width: 38px; text-align: center; font-variant-numeric: tabular-nums; }
 
 @media (max-width: 924px) {
   #main { display: block; max-width: 800px; margin-top: 32px; padding-bottom: 50px; }
@@ -186,6 +204,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .site-brand { width: 72px; height: 43px; }
   .visitor-stats { grid-template-columns: minmax(0,1fr); gap: 18px; margin-top: 38px; padding-top: 22px; }
   .visitor-stats__intro h2 { font-size: 21px; }
+  .visitor-map-dialog { padding: 16px; }
+  .visitor-map-dialog__header h2 { font-size: 22px; }
   .greedy-nav { min-width: 0; }
   .greedy-nav a { margin-left: 18px; padding: 8px 0; font-size: 11px; letter-spacing: 0; }
   #main { margin-top: 26px; padding: 0 22px 40px; }
